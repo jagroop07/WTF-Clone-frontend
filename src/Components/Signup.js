@@ -47,13 +47,15 @@ export const Signup = () => {
     let password = watch("password")
 
     async function handlesubmit(data){
+        console.log(data)
+        console.log(data.avatar[0])
         try {     
             const formdata = new FormData()
             formdata.append('username',data.username.trim())
             formdata.append('email',data.email.trim())
             formdata.append('gender',data.gender.trim())
             formdata.append('password',data.password.trim()) 
-            formdata.append('avatar', data.files[0])      
+            formdata.append('avatar', data.avatar[0])      
             const response = await axios.post('http://localhost:8080/users/signup', formdata)
             if(response.data.message === "Success"){
                 navigate("/login")
