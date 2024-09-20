@@ -3,6 +3,7 @@ import Cart from './Cart'
 import { contxt } from './Apicontxt'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import './Navbar.css'
 // import Marquee from 'react-fast-marquee'
 
 const Navbar = () => {

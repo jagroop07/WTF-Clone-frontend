@@ -47,8 +47,6 @@ export const Signup = () => {
     let password = watch("password")
 
     async function handlesubmit(data){
-        console.log(data)
-        console.log(data.avatar[0])
         try {     
             const formdata = new FormData()
             formdata.append('username',data.username.trim())
